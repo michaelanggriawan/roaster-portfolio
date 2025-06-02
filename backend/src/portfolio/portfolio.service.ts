@@ -148,7 +148,7 @@ export class PortfolioService {
 
 function extractYoutubeVideoId(url: string): string | null {
   const match = url.match(
-    /(?:youtube\.com\/(?:embed\/|watch\?v=)|youtu\.be\/)([\w-]{11})/,
+    /(?:youtube\.com\/(?:embed\/|watch\?v=|shorts\/)|youtu\.be\/)([\w-]{11})/,
   );
   return match?.[1] || null;
 }

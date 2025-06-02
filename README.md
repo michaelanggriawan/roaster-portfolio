@@ -1,6 +1,6 @@
 # 🎯 Roster Technical Assignment – Full Stack Engineer
 
-This repository contains my submission for the Roster Full Stack Engineer technical assignment. The goal was to build a system that allows users (talents) to submit a personal portfolio link and automatically extract structured data from the page — including their name, title, bio, clients/employers, and related YouTube videos — and render it in a user-friendly format.
+This repository contains my submission for the Roster Full Stack Engineer technical assignment. The goal was to build a system that allows users (talents) to submit a personal portfolio link and automatically extract structured data from the page , including their name, title, bio, clients/employers, and related YouTube videos, and render it in a user-friendly format.
 
 ---
 
@@ -26,12 +26,12 @@ This repository contains my submission for the Roster Full Stack Engineer techni
 
 ## 📐 Tech Stack
 
-| Layer     | Technology          |
-|-----------|---------------------|
+| Layer     | Technology              |
+|-----------|--------------------------|
 | Frontend  | Next.js (React + Tailwind) |
-| Backend   | NestJS (Node.js)    |
-| Database  | SQLite + TypeORM    |
-| Scraping  | Playwright + Cheerio |
+| Backend   | NestJS (Node.js)        |
+| Database  | SQLite + TypeORM        |
+| Scraping  | Playwright + Cheerio    |
 | AI Assist | OpenAI GPT-4 (optional) |
 
 ---
@@ -41,7 +41,7 @@ This repository contains my submission for the Roster Full Stack Engineer techni
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/roster-scraper.git
+git clone https://github.com/michaelanggriawan/roaster-portfolio.git
 cd roster-scraper
 ```
 
@@ -54,6 +54,28 @@ cp .env.example .env
 pnpm install
 pnpm start:dev
 ```
+
+**⚠️ Important:** If you encounter this error:
+
+```
+browserType.launch: Executable doesn't exist...
+```
+
+It means Playwright was installed but the browser binaries are missing. To fix this, run:
+
+```bash
+npx playwright install
+```
+
+Or only install Chromium:
+
+```bash
+npx playwright install chromium
+```
+
+This step is mandatory after fresh setup.
+
+---
 
 ### 3. Start frontend
 
@@ -129,7 +151,5 @@ This project is currently running locally. It can be deployed easily using:
 - No authentication is required — this app is 100% public.
 - AI is optional and non-blocking — fallback is robust.
 - Minimal design inspired by Rove Miles for UX clarity and aesthetics.
+- Browser errors like `browserType.launch` can be solved by running `npx playwright install` once.
 
----
-
-> If you have any questions or need me to walk through the code in a video, I'm happy to do so. Thanks for the opportunity!
