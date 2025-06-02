@@ -152,4 +152,6 @@ This project is currently running locally. It can be deployed easily using:
 - AI is optional and non-blocking — fallback is robust.
 - Minimal design inspired by Rove Miles for UX clarity and aesthetics.
 - Browser errors like `browserType.launch` can be solved by running `npx playwright install` once.
+- Please make sure you are running backend first, then frontend
+
 
